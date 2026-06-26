@@ -8,7 +8,10 @@ workflows:
     scripts:
       - name: Get dependencies
         script: flutter pub get
-      - name: Build APK
-        script: flutter build apk --release --target-platform android-arm64
+      - name: Clean and build
+        script: |
+          cd android
+          ./gradlew clean
+          ./gradlew assembleRelease
     artifacts:
-      - build/app/outputs/flutter-apk/app-release.apk
+      - android/app/build/outputs/apk/release/app-release.apk
