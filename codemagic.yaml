@@ -1,20 +1,13 @@
 workflows:
   default-workflow:
     name: Default Workflow
-    instance_type: mac_mini_m2
-    max_build_duration: 60
     environment:
       flutter: stable
+      java: 17
     scripts:
-      - name: Get dependencies
-        script: flutter pub get
       - name: Grant permission to gradlew
         script: chmod +x android/gradlew
-      - name: Update gradle wrapper
-        script: |
-          cd android
-          ./gradlew wrapper --gradle-version 8.5
-      - name: Clean and build
+      - name: Build APK
         script: |
           cd android
           ./gradlew clean
