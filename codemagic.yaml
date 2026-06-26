@@ -8,6 +8,8 @@ workflows:
     scripts:
       - name: Get dependencies
         script: flutter pub get
+      - name: Grant permission to gradlew
+        script: chmod +x android/gradlew
       - name: Clean and build
         script: |
           cd android
