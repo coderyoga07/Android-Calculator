@@ -1,0 +1,14 @@
+.DS_Store
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+*.iml
+*.log
+.idea/
+.vscode/
+android/app/src/main/res/mipmap-*/
+android/local.properties
+android/key.properties
+ios/.generated/
