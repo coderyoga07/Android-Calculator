@@ -12,3 +12,4 @@ android/app/src/main/res/mipmap-*/
 android/local.properties
 android/key.properties
 ios/.generated/
+"local.properties" 
