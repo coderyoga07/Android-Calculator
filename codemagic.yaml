@@ -10,10 +10,10 @@ workflows:
         script: flutter pub get
       - name: Grant permission to gradlew
         script: chmod +x android/gradlew
-      - name: Ensure gradle wrapper
+      - name: Update gradle wrapper
         script: |
           cd android
-          gradle wrapper
+          ./gradlew wrapper --gradle-version 8.5
       - name: Clean and build
         script: |
           cd android
